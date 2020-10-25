@@ -1,25 +1,17 @@
 export const initialState = {
-	name: [],
-	id:[]
-	
+	user:null
   };
   
   // Selector  
   const reducer = (state, action) => {
 	console.log(action);
 	switch (action.type) {
-	  case "COUNT":
+	  case "SET_USER":
 		return {
-		  ...state,
-		  name: [...state.name, action.item.name],
-		  id: [...state.id, action.item.id]
-		};
-		case "DISCOUNT":
-		  return {
 			...state,
-			name: [...state.name, action.item]
-		  };
-	  
+			user: action.user,
+		};
+
 	  default:
 		return state;
 	}

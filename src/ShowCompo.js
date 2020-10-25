@@ -3,10 +3,10 @@ import { useStateValue } from '../src/StateProvider';
 
 function ShowCompo() {
     
-  const [{ name,id }, dispatch] = useStateValue();
+  const [{ count }, dispatch] = useStateValue();
     return (
         <div>
-            {id} <br/>{name}
+            {count}
         </div>
     )
 }
