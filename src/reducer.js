@@ -1,28 +1,15 @@
-export const initialState = {
-	user:null,
-	cars: {
-		// car1: { name: 'Honda', price: 100 },
-		// car2: { name: 'BMW', price: 150 },
-		// car3: { name: 'Mercedes', price: 200 }
-		name: [],
-		price: [],
-	}
-  };
+export const initialState ={
+	count: 0
+};
   
   // Selector  
   const reducer = (state, action) => {
 	console.log(action);
 	switch (action.type) {
-	  case "SET_USER":
+	  case "COUNT":
 		return {
-			...state,
-			user: action.user,
+			count : action.val
 		};
-		case "SET_CAR":
-		  return {
-			  ...state,
-			  cars: action.car,
-		  };
 
 	  default:
 		return state;
