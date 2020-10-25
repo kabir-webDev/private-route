@@ -1,5 +1,12 @@
 export const initialState = {
-	user:null
+	user:null,
+	cars: {
+		// car1: { name: 'Honda', price: 100 },
+		// car2: { name: 'BMW', price: 150 },
+		// car3: { name: 'Mercedes', price: 200 }
+		name: [],
+		price: [],
+	}
   };
   
   // Selector  
@@ -11,6 +18,11 @@ export const initialState = {
 			...state,
 			user: action.user,
 		};
+		case "SET_CAR":
+		  return {
+			  ...state,
+			  cars: action.car,
+		  };
 
 	  default:
 		return state;

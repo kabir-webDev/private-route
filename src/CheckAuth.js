@@ -2,12 +2,12 @@ import React from 'react'
 import {useStateValue} from "./StateProvider";
 function CheckAuth() {
     
-  const [{user}, dispatch] = useStateValue();
-
+  const [{user,cars}, dispatch] = useStateValue();
+console.log(cars.name);
     return (
         <div>
             {
-                user? `Logged in as ${user}` : 'Not Logged in'
+                user? `Logged in as ${user} & He has ${cars.name} & Price is ${cars.price}` : 'Not Logged in'
             }
         </div>
     )
