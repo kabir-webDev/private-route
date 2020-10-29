@@ -2,13 +2,17 @@ import React from 'react'
 import { useStateValue } from '../src/StateProvider';
 
 function Compo() {
-  const [{count}, dispatch] = useStateValue();
+  const [{store}, dispatch] = useStateValue();
 
   const loginToApp = () => {
     // dispatch the item into the data layer
     dispatch({
-      type: "COUNT",
-      val: count-1
+      type: "ADD_USER",
+      details:{
+        name: "Kabir",
+        id: "328",
+        year: "10th"
+      }
     });
   };
 

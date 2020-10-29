@@ -2,11 +2,11 @@ import React from 'react'
 import {useStateValue} from "./StateProvider";
 function CheckAuth() {
     
-  const [{count}, dispatch] = useStateValue();
-
+  const [{store,id}, dispatch] = useStateValue();
+    console.log(store.item);
     return (
         <div>
-            <h1>{count}</h1>
+            Nothing is here...
         </div>
     )
 }

@@ -1,14 +1,15 @@
 export const initialState ={
-	count: 0
+	store: []
 };
   
   // Selector  
   const reducer = (state, action) => {
 	console.log(action);
 	switch (action.type) {
-	  case "COUNT":
+	  case "ADD_USER":
 		return {
-			count : action.val
+			...state,
+			store :[...state.store, action.details] ,
 		};
 
 	  default:
